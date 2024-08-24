@@ -16,10 +16,10 @@ $conexion = new PDO("sqlsrv:server=Aca va el nombre del server; database=Nombre 
     echo "conectado a sql server";
 }*/
 
-$consulta = $conexion -> prepare("SELECT * FROM GESTORES_Este es el nombre de la tabla");
-$consulta -> execute();
+//$consulta = $conexion -> prepare("SELECT * FROM GESTORES_Este es el nombre de la tabla");
+//$consulta -> execute();
 
-$datos= $consulta -> fetchAll(PDO::FETCH_OBJ);
+//$datos= $consulta -> fetchAll(PDO::FETCH_OBJ);
 
 //var_dump($datos);
 //echo json_endcode($datos);

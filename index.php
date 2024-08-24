@@ -1,5 +1,5 @@
 <?php 
-    include(../)
+    include("../Configuracion/conexion.php");
 
 ?>
 
@@ -42,7 +42,7 @@
                         
                     </tr>
                     <?php
-                    $consulta = $conexion ->prepare("SELEC * FROM ALUMNOS");
+                    $consulta = $conexion ->prepare("SELEC * FROM ALUMNOS ACA TAMBIEN SE PUEDE INSERTAR PROCEDIMIENTOS ALMACENADOS");
                     $consulta ->execute();
 
                     while($datos=$consulta-> fetch(PDO::FETCH_OBJ))
