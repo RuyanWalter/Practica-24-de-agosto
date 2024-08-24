@@ -1,3 +1,8 @@
+<?php 
+    include(../)
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,6 +41,24 @@
                         <th>Direccion</th>
                         
                     </tr>
+                    <?php
+                    $consulta = $conexion ->prepare("SELEC * FROM ALUMNOS");
+                    $consulta ->execute();
+
+                    while($datos=$consulta-> fetch(PDO::FETCH_OBJ))
+                    {
+                
+                    ?>
+                    <tr>
+                        <th><?php echo $datos->Carnet?></th>
+                        <th><?php echo $datos->Nombre?></th>
+                        <th><?php echo $datos->Direccion?></th>
+                        
+                    </tr>
+                    <?php
+                    }
+                    ?>
+                    
 
                 </table>
                 
